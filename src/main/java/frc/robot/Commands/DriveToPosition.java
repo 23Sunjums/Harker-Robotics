@@ -27,7 +27,8 @@ public class DriveToPosition extends Command {
     @Override
     protected void initialize() {
         
-        
+        Drivetrain.getInstance().getLeftMaster().setSelectedSensorPosition(0);
+        Drivetrain.getInstance().getRightMaster().setSelectedSensorPosition(0);
 
         Drivetrain.getInstance().getLeftMaster().selectProfileSlot(Drivetrain.positionSlot, RobotMap.PRIMARY_INDEX);
         Drivetrain.getInstance().getRightMaster().selectProfileSlot(Drivetrain.positionSlot, RobotMap.PRIMARY_INDEX);

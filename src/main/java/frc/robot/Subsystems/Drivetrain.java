@@ -21,13 +21,13 @@ public class Drivetrain extends HSDrivetrain{
     
     private static final double voltage = 10;        
    
-    private static final double rightPositionP = 0;
+    private static final double rightPositionP = 0.8;
     private static final double rightPositionI = 0;
-    private static final double rightPositionD = 0;
+    private static final double rightPositionD = 14;
     
-    private static final double leftPositionP = 0;
+    private static final double leftPositionP = 0.8;
     private static final double leftPositionI = 0;
-    private static final double leftPositionD = 0;
+    private static final double leftPositionD = 14;
     
     public static final int positionSlot = 0;
     
