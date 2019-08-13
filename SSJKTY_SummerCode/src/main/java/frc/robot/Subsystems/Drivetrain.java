@@ -1,5 +1,6 @@
 package frc.robot.Subsystems;
 
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import frc.robot.RobotMap;
@@ -36,7 +37,7 @@ public class Drivetrain extends HSDrivetrain{
         getRightFollower().setInverted(rightVictorInverted);
         getLeftFollower().follow(getLeftMaster());
         getRightFollower().follow(getRightMaster());
-        getLeftMaster().setNeutralMode(Neutralmode.Brake)
+        getLeftMaster().setNeutralMode(NeutralMode.Brake);
         getRightMaster().setNeutralMode(NeutralMode.Brake);
      }
 
