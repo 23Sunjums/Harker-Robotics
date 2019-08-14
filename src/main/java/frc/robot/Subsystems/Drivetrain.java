@@ -3,7 +3,6 @@ package frc.robot.Subsystems;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
-
 import frc.robot.RobotMap;
 import frc.robot.Commands.DriveWithPercentOutput;
 import harkerrobolib.subsystems.HSDrivetrain;
