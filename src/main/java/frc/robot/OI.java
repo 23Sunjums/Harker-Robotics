@@ -1,6 +1,9 @@
 package frc.robot;
 
 import frc.robot.Commands.DriveToPosition;
+import frc.robot.Commands.SetArm;
+import frc.robot.Commands.ToggleArm;
+import frc.robot.Subsystems.Arm;
 import harkerrobolib.wrappers.XboxGamepad;
 
 public class OI {
@@ -13,10 +16,11 @@ public class OI {
     public static final int operatorPort = 1;
 
     public OI() {
-      
+
         driverGamepad = new XboxGamepad(driverPort);
         operatorGamepad = new XboxGamepad(operatorPort);
         initBinding();
+        
     }
       
     public static OI getInstance() {
@@ -37,9 +41,120 @@ public class OI {
     private void initBinding() {
 
         getDriver().getButtonY().whenPressed(new DriveToPosition(12288));
-
-        
+        getDriver().getButtonBumperLeft().whenPressed(new SetArm(Arm.RETRACED));
+        getDriver().getButtonBumperRight().whenPressed(new SetArm(Arm.EXTENDED));
+        getDriver().getButtonA().whenPressed(new ToggleArm());
+        getDriver().getButtonX().whenPressed(new ToggleFlower());
+    
         
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**    DOODLE ZONE
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>                \    /      ______        _______       ________
+ <o/                 \  /       |             |                |
+ \o>                  \/        |__           |__              |
+ <o/                  /         |             |                |
+ \o>                 /          |_____        |______          |
+ <o/
+ \o>
+ <o/ 
+ \o>                      _____   _____     
+ <o/                     |    |     |    |\   |   |  /
+ \o>                     |    |     |    | \  |   |_/
+ <o/                     |    |     |    |  \ |   | \
+ \o>                     |____|   __|__  |   \|   |  \
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <o/
+ \o>
+ <*/

@@ -1,11 +1,15 @@
-package main.java.frc.robot.Subsystems;
+package frc.robot.Subsystems;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
 
-public class Arm extends Subsystems {
+public class Arm extends Subsystem {
 
-    private static final DoubleSolenoid.Value EXTENDED = DoubleSolenoid.Value.kForward;
-    private static final DoubleSolenoid.Value RETRACED = DoubleSolenoid.Value.kReverse;
+    public void initDefaultCommand(){}
+
+    public static final DoubleSolenoid.Value EXTENDED = DoubleSolenoid.Value.kForward;
+    public static final DoubleSolenoid.Value RETRACED = DoubleSolenoid.Value.kReverse;
     
     private DoubleSolenoid solenoid;
 
@@ -21,7 +25,7 @@ public class Arm extends Subsystems {
 
     private Arm(){
     
-       solenoid = new DoubleSolenoid(RobotMap.SOLENOID_EXTEND, RobotMap.SOLENOID_RETRACT);
+       solenoid = new DoubleSolenoid(RobotMap.FORWARD_ARM, RobotMap.REVERSE_ARM);
        
     }
 
@@ -42,12 +46,4 @@ public class Arm extends Subsystems {
 }
 
 
-/*
 
-
-
-
-
-
-
-*/

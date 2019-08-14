@@ -1,13 +1,14 @@
 package frc.robot.Commands;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.command.InstantCommand;
+import frc.robot.Subsystems.Arm;
 
-    
-public class SetArm extends InstantCommand{
+public class SetArm extends InstantCommand {
 
     private DoubleSolenoid.Value value;
 
-    private SetArm(DoubleSolenoid.Value value) {
+    public SetArm(DoubleSolenoid.Value value) {
         
         requires (Arm.getInstance());
 
@@ -19,7 +20,6 @@ public class SetArm extends InstantCommand{
     protected void initialize() {
         
         Arm.getInstance().setSolenoid(value);
-        
         
     
     }    
