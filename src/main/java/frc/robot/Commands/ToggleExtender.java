@@ -18,13 +18,13 @@ public class ToggleExtender extends InstantCommand {
         
         if (value == Extender.OUT){
          
-            Extender.getInstance().setSolenoid(Extender.OUT);
+            Extender.getInstance().setSolenoid(Extender.IN);
         }
         else {
             
-            Extender.getInstance().setSolenoid(Extender.IN);
+            Extender.getInstance().setSolenoid(Extender.OUT;
             
         }        
         
     }
-}   
+}

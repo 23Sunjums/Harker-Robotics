@@ -67,7 +67,6 @@ public class Drivetrain extends HSDrivetrain{
 
     }
     
-
     private void setupPositionPID() {
     
         getRightMaster().config_kP(positionSlot, rightPositionP);

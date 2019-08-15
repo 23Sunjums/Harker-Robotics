@@ -1,6 +1,5 @@
 package frc.robot;
 
-import frc.robot.Commands.DriveToPosition;
 import frc.robot.Commands.SetArm;
 import frc.robot.Commands.ToggleArm;
 import frc.robot.Commands.ToggleExtender;
@@ -142,15 +141,15 @@ public class OI {
       | \_______/ |_____________________________
       |___________|                             \
            \                                  |\ \            __
-            \             bruh                | \ \          / /
+            \                                 | \ \          / /
              \                                |  \ \        / /
               \_______________________________|   \ \______/ /
-                                    \  \  /  /     \________/
-                                     \  \/  /
-                                      \  \ /
-                                      /\  \
- \o>                                 /  \  \
- <o/                                     \__\
+                \  \  /  /          \  \  /  /     \________/
+                 \  \/  /            \  \/  /
+                  \  \ /              \  \ /
+                   \  \               /\  \
+                    \  \             /  \  \
+                     \__\           /__/ \__\
  \o>
  <o/
  \o>

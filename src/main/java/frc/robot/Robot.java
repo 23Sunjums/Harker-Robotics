@@ -8,8 +8,13 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import frc.robot.Subsystems.Drivetrain;
+import frc.robot.Subsystems.Elevator;
+import frc.robot.Subsystems.Arm;
+import frc.robot.Subsystems.Extender;
+import frc.robot.Subsystems.Flower;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -31,6 +36,10 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     Drivetrain.getInstance();
+    Elevator.getInstance();
+    Arm.getInstance();
+    Extender.getInstance();
+    Flower.getInstance();
   }
 
   /**
@@ -43,6 +52,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
+    Scheduler.getInstance().run();
   }
 
   /**
@@ -68,15 +78,8 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void autonomousPeriodic() {
-    switch (m_autoSelected) {
-      case kCustomAuto:
-        // Put custom auto code here
-        break;
-      case kDefaultAuto:
-      default:
-        // Put default auto code here
-        break;
-    }
+    Scheduler.getInstance().run();
+    
   }
 
   /**
@@ -84,6 +87,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
+    Scheduler.getInstance().run();
   }
 
   /**
@@ -91,5 +95,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void testPeriodic() {
+    Scheduler.getInstance().run();
   }
 }
