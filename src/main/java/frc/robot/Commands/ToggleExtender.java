@@ -22,7 +22,7 @@ public class ToggleExtender extends InstantCommand {
         }
         else {
             
-            Extender.getInstance().setSolenoid(Extender.OUT;
+            Extender.getInstance().setSolenoid(Extender.OUT);
             
         }        
         

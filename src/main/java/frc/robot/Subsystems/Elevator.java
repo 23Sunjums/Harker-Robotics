@@ -14,8 +14,9 @@ public class Elevator extends Subsystem {
     private static final boolean followerTalonInverted = true;
     private static final boolean lFollowerVictorInverted = true;
     private static final boolean rFollowerVictorIneverted = true;
-
     
+    public static final double FF = 0;
+
     private static Elevator instance;
 
     private HSTalon masterTalon;
@@ -93,8 +94,6 @@ public class Elevator extends Subsystem {
         
     }
 
-    private void setDefaultCommand() {
-    }
+    private void setDefaultCommand() {}
 
 }
-

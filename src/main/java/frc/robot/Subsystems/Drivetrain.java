@@ -34,7 +34,7 @@ public class Drivetrain extends HSDrivetrain{
     
     public Drivetrain() {
         super(new HSTalon(RobotMap.TALON_L), new HSTalon(RobotMap.TALON_R),
-              new VictorSPX(RobotMap.VICTOR_R), new VictorSPX(RobotMap.VICTOR_L));
+              new VictorSPX(RobotMap.VICTOR_L), new VictorSPX(RobotMap.VICTOR_R));
         talonInit();
     }
     

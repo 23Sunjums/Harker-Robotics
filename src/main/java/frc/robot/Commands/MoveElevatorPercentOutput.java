@@ -1,14 +1,13 @@
 package frc.robot.Commands;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
-
 import frc.robot.OI;
 import frc.robot.Subsystems.Elevator;
 import harkerrobolib.commands.IndefiniteCommand;
 import harkerrobolib.util.MathUtil;
+import com.ctre.phoenix.motorcontrol.DemandType;
 
 public class MoveElevatorPercentOutput extends IndefiniteCommand {
-
     
     public static final double SPEEDMULTIPLIER = 0.3;
     
@@ -23,7 +22,6 @@ public class MoveElevatorPercentOutput extends IndefiniteCommand {
         Elevator.getInstance().getMasterTalon().set(ControlMode.Disabled,0);
     }
     
-    
     public void interrupted(){
         
         end();
@@ -36,7 +34,8 @@ public class MoveElevatorPercentOutput extends IndefiniteCommand {
         
         MathUtil.mapJoystickOutput(RightY,0.1);
         
-        Elevator.getInstance().getMasterTalon().set(ControlMode.PercentOutput,(RightY)*(SPEEDMULTIPLIER));
+        Elevator.getInstance().getMasterTalon().set(ControlMode.PercentOutput,
+        (RightY)*(SPEEDMULTIPLIER),DemandType.ArbitraryFeedForward,Elevator.FF);
     }
 
 }

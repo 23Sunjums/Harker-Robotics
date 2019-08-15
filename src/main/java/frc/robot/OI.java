@@ -1,9 +1,11 @@
 package frc.robot;
 
+import frc.robot.Commands.DriveToPosition;
 import frc.robot.Commands.SetArm;
 import frc.robot.Commands.ToggleArm;
 import frc.robot.Commands.ToggleExtender;
 import frc.robot.Commands.ToggleFlower;
+import frc.robot.Commands.ZeroElevator;
 import frc.robot.Subsystems.Arm;
 import harkerrobolib.wrappers.XboxGamepad;
 
@@ -41,13 +43,13 @@ public class OI {
     
     private void initBinding() {
 
-        // getDriver().getButtonY().whenPressed(new DriveToPosition(12288));
+        //getDriver().getButtonY().whenPressed(new DriveToPosition(12288));
         getDriver().getButtonBumperLeft().whenPressed(new SetArm(Arm.RETRACED));
         getDriver().getButtonBumperRight().whenPressed(new SetArm(Arm.EXTENDED));
         getDriver().getButtonA().whenPressed(new ToggleArm());
         getDriver().getButtonX().whenPressed(new ToggleFlower());
         getDriver().getButtonB().whenPressed(new ToggleExtender());
-        
+        getDriver().getButtonStart().whenPressed(new ZeroElevator());
     }
 }
 
@@ -141,7 +143,7 @@ public class OI {
       | \_______/ |_____________________________
       |___________|                             \
            \                                  |\ \            __
-            \                                 | \ \          / /
+            \    stop telling me to IMPORT    | \ \          / /
              \                                |  \ \        / /
               \_______________________________|   \ \______/ /
                 \  \  /  /          \  \  /  /     \________/
