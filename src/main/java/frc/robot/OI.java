@@ -133,10 +133,10 @@ public class OI {
  <o/
  \o>
  <o/
- \o>
+ \o> 
  <o/
  \o>
- <o/
+ <o/Johnny when he sees this: ಠ_ಠ
        ____________
      /|  o    o   |\    TEXT BOX BELOW \/ \/
     /_|    /\     |_\
@@ -159,6 +159,6 @@ public class OI {
  \o>
  <o/
  \o>
- <o/
+ <o/               
  \o>
  <*/

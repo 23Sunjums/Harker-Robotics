@@ -88,10 +88,6 @@ public class Elevator extends Subsystem {
         getMasterTalon().configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute);
         
         getMasterTalon().setSelectedSensorPosition(0);
-
-        
-
-        
     }
 
     private void setDefaultCommand() {}
