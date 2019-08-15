@@ -14,7 +14,6 @@ public class ToggleFlower extends InstantCommand{
 
     @Override
     protected void initialize() {
-    
         DoubleSolenoid.Value value = Flower.getInstance().getSolenoid().get();
 
         if (value == Flower.OPEN){

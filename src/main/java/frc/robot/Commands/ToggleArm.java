@@ -14,7 +14,6 @@ public class ToggleArm extends InstantCommand {
 
     @Override
     protected void initialize() {
-    
         DoubleSolenoid.Value value = Arm.getInstance().getSolenoid().get();
 
         if (value == Arm.EXTENDED){

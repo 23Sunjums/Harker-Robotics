@@ -3,6 +3,8 @@ package frc.robot;
 import frc.robot.Commands.DriveToPosition;
 import frc.robot.Commands.SetArm;
 import frc.robot.Commands.ToggleArm;
+import frc.robot.Commands.ToggleExtender;
+import frc.robot.Commands.ToggleFlower;
 import frc.robot.Subsystems.Arm;
 import harkerrobolib.wrappers.XboxGamepad;
 
@@ -40,12 +42,12 @@ public class OI {
     
     private void initBinding() {
 
-        getDriver().getButtonY().whenPressed(new DriveToPosition(12288));
+        // getDriver().getButtonY().whenPressed(new DriveToPosition(12288));
         getDriver().getButtonBumperLeft().whenPressed(new SetArm(Arm.RETRACED));
         getDriver().getButtonBumperRight().whenPressed(new SetArm(Arm.EXTENDED));
         getDriver().getButtonA().whenPressed(new ToggleArm());
         getDriver().getButtonX().whenPressed(new ToggleFlower());
-    
+        getDriver().getButtonB().whenPressed(new ToggleExtender());
         
     }
 }
@@ -126,19 +128,7 @@ public class OI {
  <o/
  \o>
  <o/
- \o>                \    /      ______        _______       ________
- <o/                 \  /       |             |                |
- \o>                  \/        |__           |__              |
- <o/                  /         |             |                |
- \o>                 /          |_____        |______          |
- <o/
- \o>
- <o/ 
- \o>                      _____   _____     
- <o/                     |    |     |    |\   |   |  /
- \o>                     |    |     |    | \  |   |_/
- <o/                     |    |     |    |  \ |   | \
- \o>                     |____|   __|__  |   \|   |  \
+ \o>               
  <o/
  \o>
  <o/
@@ -146,8 +136,21 @@ public class OI {
  <o/
  \o>
  <o/
- \o>
- <o/
+       ____________
+     /|  o    o   |\
+    /_|    /\     |_\
+      | \_______/ |_____________________________
+      |___________|                             \
+           \                                  |\ \            __
+            \             bruh                | \ \          / /
+             \                                |  \ \        / /
+              \_______________________________|   \ \______/ /
+                                    \  \  /  /     \________/
+                                     \  \/  /
+                                      \  \ /
+                                      /\  \
+ \o>                                 /  \  \
+ <o/                                     \__\
  \o>
  <o/
  \o>

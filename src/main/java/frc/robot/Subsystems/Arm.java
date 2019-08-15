@@ -15,7 +15,7 @@ public class Arm extends Subsystem {
 
     private static Arm instance;
 
-    public static Arm getInstance(){
+    public static Arm getInstance() {
         if(instance==null){
             instance = new Arm();
         }
@@ -40,10 +40,6 @@ public class Arm extends Subsystem {
 
         return solenoid;     
         
-        
 
     }
 }
-
-
-

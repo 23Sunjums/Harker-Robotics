@@ -9,7 +9,6 @@ public class Extender extends Subsystem {
 
     public void initDefaultCommand(){}
 
-
     public static final DoubleSolenoid.Value OUT = DoubleSolenoid.Value.kForward;
     public static final DoubleSolenoid.Value IN = DoubleSolenoid.Value.kReverse;
     

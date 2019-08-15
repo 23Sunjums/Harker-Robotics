@@ -7,7 +7,7 @@ import frc.robot.Subsystems.Extender;
 public class SetExtender extends InstantCommand {
 
     private DoubleSolenoid.Value value;
-
+    
     public SetExtender(DoubleSolenoid.Value value) {
 
         requires (Extender.getInstance());
