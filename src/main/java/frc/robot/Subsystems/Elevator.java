@@ -15,7 +15,7 @@ public class Elevator extends Subsystem {
     private static final boolean lFollowerVictorInverted = true;
     private static final boolean rFollowerVictorIneverted = true;
     
-    public static final double FF = 0;
+    public static final double FF = 0.13;
 
     private static Elevator instance;
 
