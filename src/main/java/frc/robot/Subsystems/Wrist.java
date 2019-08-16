@@ -20,7 +20,7 @@ public class Wrist extends Subsystem {
     private static final boolean masterTalonWristInverted = false;
     private static final boolean followerVictorWristInverted = false;
 
-    private static final double horizontalAngle = 0;
+    private static final double horizontalAngle = 0.1;
     
 
     private static final boolean SensorPhase = true;
