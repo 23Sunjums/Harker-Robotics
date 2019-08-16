@@ -20,6 +20,9 @@ public class Wrist extends Subsystem {
     private static final boolean masterTalonWristInverted = false;
     private static final boolean followerVictorWristInverted = false;
 
+    private static final double horizontalAngle = 0;
+    
+
     private static final boolean SensorPhase = true;
     
     public static Wrist getInstance(){
@@ -69,6 +72,17 @@ public class Wrist extends Subsystem {
 
     }
 
-    
+    public double convertTicks(double ticks){
+
+       return  ticks*(360/4096);
+
+    }
+
+    public double convertAngles(double angle){
+   
+        return  Math.cos(Math.toRadians(angle))*horizontalAngle;
+    }
+
+
 
 }

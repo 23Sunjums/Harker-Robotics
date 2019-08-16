@@ -6,6 +6,7 @@ import frc.robot.OI;
 import frc.robot.Subsystems.Wrist;
 import harkerrobolib.commands.IndefiniteCommand;
 import harkerrobolib.util.MathUtil;
+import com.ctre.phoenix.motorcontrol.DemandType;
 
 public class MoveWristPercentOutput extends IndefiniteCommand {
 
@@ -35,13 +36,21 @@ public class MoveWristPercentOutput extends IndefiniteCommand {
         
         RightX = MathUtil.mapJoystickOutput(RightX,0.1);
 
-        Wrist.getInstance().getMasterTalonWrist().set(ControlMode.PercentOutput,(RightX)*(SPEEDMULTIPLIER));
+        Wrist.getInstance().getMasterTalonWrist().set(ControlMode.PercentOutput,(RightX)*(SPEEDMULTIPLIER), 
+        DemandType.ArbitraryFeedForward, 
+        Wrist.getInstance().convertAngles(Wrist.getInstance().convertTicks
+        (Wrist.getInstance().getMasterTalonWrist().getSelectedSensorPosition())));
 
         Wrist.getInstance().getMasterTalonWrist();
 
         SmartDashboard.putNumber("SetPosition",Wrist.getInstance().getMasterTalonWrist().getSelectedSensorPosition());
         
     }
+
+
+
+
+
 
 }
 
