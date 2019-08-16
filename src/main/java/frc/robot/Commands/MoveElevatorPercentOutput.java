@@ -7,6 +7,8 @@ import harkerrobolib.commands.IndefiniteCommand;
 import harkerrobolib.util.MathUtil;
 import com.ctre.phoenix.motorcontrol.DemandType;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 public class MoveElevatorPercentOutput extends IndefiniteCommand {
     
     public static final double SPEEDMULTIPLIER = 0.3;
@@ -36,6 +38,9 @@ public class MoveElevatorPercentOutput extends IndefiniteCommand {
         
         Elevator.getInstance().getMasterTalon().set(ControlMode.PercentOutput,
         (RightY)*(SPEEDMULTIPLIER),DemandType.ArbitraryFeedForward,Elevator.FF);
+
+        SmartDashboard.putNumber("Elevator", Elevator.getInstance().getMasterTalon().getSelectedSensorPosition());
+
     }
 
 }
