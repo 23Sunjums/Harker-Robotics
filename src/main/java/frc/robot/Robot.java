@@ -15,6 +15,7 @@ import frc.robot.Subsystems.Elevator;
 import frc.robot.Subsystems.Arm;
 import frc.robot.Subsystems.Extender;
 import frc.robot.Subsystems.Flower;
+import frc.robot.Subsystems.Roller;
 import frc.robot.Subsystems.Wrist;
 
 /**
@@ -42,6 +43,7 @@ public class Robot extends TimedRobot {
     Extender.getInstance();
     Flower.getInstance();
     Wrist.getInstance();
+    Roller.getInstance();
   } 
 
   /**

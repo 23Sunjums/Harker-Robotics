@@ -15,6 +15,7 @@ public class Elevator extends Subsystem {
     private static final boolean rFollowerVictorIneverted = true;
     public static final int ForwardLimit = 17800;
     public static final int BackwardLimit = 200;
+    public static final boolean sensorPhase = true;
     
     public static final double FF = 0.13;
 
@@ -73,8 +74,6 @@ public class Elevator extends Subsystem {
         
         getMasterTalon().configFactoryDefault();
         getFollowerTalon().configFactoryDefault();
-        getLFollowerVictor().configFactoryDefault();
-        getRFollowerVictor().configFactoryDefault();
 
         getFollowerTalon().follow(getMasterTalon());
         getLFollowerVictor().follow(getMasterTalon());
@@ -91,6 +90,8 @@ public class Elevator extends Subsystem {
         
         getMasterTalon().configForwardSoftLimitThreshold(ForwardLimit);
         getMasterTalon().configForwardSoftLimitEnable(true);
+
+        getMasterTalon().setSensorPhase(sensorPhase);
         
         getMasterTalon().configReverseSoftLimitThreshold(BackwardLimit);
         getMasterTalon().configReverseSoftLimitEnable(true);

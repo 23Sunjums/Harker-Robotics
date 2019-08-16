@@ -8,8 +8,8 @@ import frc.robot.OI;
 public class MoveRollerPercentOutput extends IndefiniteCommand {
 
 
-    private static final double armRollerSpeed = 0.51;
-    private static final double wristRollerSpeed = 0.3;
+    private static final double armRollerSpeed = 0.4;
+    private static final double wristRollerSpeed = 0.51;
 
     public MoveRollerPercentOutput(){
 
