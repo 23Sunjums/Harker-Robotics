@@ -32,7 +32,7 @@ public class MoveElevatorPercentOutput extends IndefiniteCommand {
         
         double RightY = OI.getInstance().getDriver().getRightY();
         
-        MathUtil.mapJoystickOutput(RightY,0.1);
+        RightY = MathUtil.mapJoystickOutput(RightY,0.1);
         
         Elevator.getInstance().getMasterTalon().set(ControlMode.PercentOutput,
         (RightY)*(SPEEDMULTIPLIER),DemandType.ArbitraryFeedForward,Elevator.FF);

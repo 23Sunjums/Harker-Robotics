@@ -1,6 +1,5 @@
 package frc.robot;
 
-import frc.robot.Commands.DriveToPosition;
 import frc.robot.Commands.SetArm;
 import frc.robot.Commands.ToggleArm;
 import frc.robot.Commands.ToggleExtender;
@@ -47,118 +46,8 @@ public class OI {
         getDriver().getButtonBumperLeft().whenPressed(new SetArm(Arm.RETRACED));
         getDriver().getButtonBumperRight().whenPressed(new SetArm(Arm.EXTENDED));
         getDriver().getButtonA().whenPressed(new ToggleArm());
-        getDriver().getButtonX().whenPressed(new ToggleFlower());
+        getOperator().getButtonX().whenPressed(new ToggleFlower());
         getDriver().getButtonB().whenPressed(new ToggleExtender());
         getDriver().getButtonStart().whenPressed(new ZeroElevator());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**    DOODLE ZONE
- <o/
- \o>
- <o/
- \o>
- <o/
- \o>
- <o/
- \o>
- <o/
- \o>
- <o/
- \o>
- <o/
- \o>
- <o/
- \o>               
- <o/
- \o>
- <o/
- \o> 
- <o/
- \o>
- <o/Johnny when he sees this: ಠ_ಠ
-       ____________
-     /|  o    o   |\    TEXT BOX BELOW \/ \/
-    /_|    /\     |_\
-      | \_______/ |_____________________________
-      |___________|                             \
-           \                                  |\ \            __
-            \    stop telling me to IMPORT    | \ \          / /
-             \                                |  \ \        / /
-              \_______________________________|   \ \______/ /
-                \  \  /  /          \  \  /  /     \________/
-                 \  \/  /            \  \/  /
-                  \  \ /              \  \ /
-                   \  \               /\  \
-                    \  \             /  \  \
-                     \__\           /__/ \__\
- \o>
- <o/
- \o>
- <o/
- \o>
- <o/
- \o>
- <o/               
- \o>
- <*/

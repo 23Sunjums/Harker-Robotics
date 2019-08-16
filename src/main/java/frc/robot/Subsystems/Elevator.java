@@ -69,8 +69,6 @@ public class Elevator extends Subsystem {
     
     private void talonInit() {
         
-        setDefaultCommand();
-
         getMasterTalon().configFactoryDefault();
         getFollowerTalon().configFactoryDefault();
         getLFollowerVictor().configFactoryDefault();
@@ -89,7 +87,5 @@ public class Elevator extends Subsystem {
         
         getMasterTalon().setSelectedSensorPosition(0);
     }
-
-    private void setDefaultCommand() {}
 
 }
