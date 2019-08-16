@@ -26,6 +26,8 @@ public class RobotMap{
     public final static int RIGHT_FOLLOWER_VICTOR = 05;
     
     public final static int MASTER_TALON_WRIST = 05;
-    public final static int FOLLOWER_TALON_WRIST = 007;
+    public final static int FOLLOWER_TALON_WRIST = 07;
 
+    public final static int VICTOR_ARM_ROLLER = 00; 
+    public final static int TALON_WRIST_ROLLER = 01; 
 }

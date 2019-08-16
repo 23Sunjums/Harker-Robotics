@@ -12,12 +12,15 @@ public class Wrist extends Subsystem {
     private HSTalon masterTalonWrist;
     private VictorSPX followerVictorWrist;
 
+    private static final int SensorPositionHorizontalFront = 0;
+    private static final int SensorPositionHorizontalBack = 2150;
+     
     private static Wrist instance;
     
     private static final boolean masterTalonWristInverted = false;
     private static final boolean followerVictorWristInverted = false;
 
-    private static final boolean SensorPhase = false;
+    private static final boolean SensorPhase = true;
     
     public static Wrist getInstance(){
 
@@ -48,7 +51,7 @@ public class Wrist extends Subsystem {
         return followerVictorWrist;
     }
 
-    private void taloninit() {
+    private void taloninit() { 
         getMasterTalonWrist().configFactoryDefault();
         getFollowerVictorWrist().configFactoryDefault();
         getMasterTalonWrist().setInverted(masterTalonWristInverted);
@@ -56,14 +59,16 @@ public class Wrist extends Subsystem {
         getFollowerVictorWrist().follow(getMasterTalonWrist());
         getMasterTalonWrist().configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute);
         getMasterTalonWrist().setSensorPhase(SensorPhase);
-        getMasterTalonWrist().setSelectedSensorPosition(0);
+        getMasterTalonWrist().setSelectedSensorPosition(-130);
     }
     
-
 
     public void initDefaultCommand() {
 
        setDefaultCommand(new MoveWristPercentOutput());
 
     }
+
+    
+
 }

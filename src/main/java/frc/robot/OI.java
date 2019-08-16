@@ -42,12 +42,91 @@ public class OI {
     
     private void initBinding() {
 
-        //getDriver().getButtonY().whenPressed(new DriveToPosition(12288));
+        //getDriver().getButtonY().whenPressed(new DriveToPosition(12288)); 
         getDriver().getButtonBumperLeft().whenPressed(new SetArm(Arm.RETRACED));
         getDriver().getButtonBumperRight().whenPressed(new SetArm(Arm.EXTENDED));
         getDriver().getButtonA().whenPressed(new ToggleArm());
-        getOperator().getButtonX().whenPressed(new ToggleFlower());
+        getDriver().getButtonX().whenPressed(new ToggleFlower());
         getDriver().getButtonB().whenPressed(new ToggleExtender());
         getDriver().getButtonStart().whenPressed(new ZeroElevator());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**  DOODLE ZONE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ಠ_ಠ */

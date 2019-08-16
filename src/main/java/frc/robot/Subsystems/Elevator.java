@@ -9,11 +9,12 @@ import harkerrobolib.wrappers.HSTalon;
 
 public class Elevator extends Subsystem {
 
-    
     private static final boolean masterTalonInverted = true;
     private static final boolean followerTalonInverted = true;
     private static final boolean lFollowerVictorInverted = true;
     private static final boolean rFollowerVictorIneverted = true;
+    public static final int ForwardLimit = 17800;
+    public static final int BackwardLimit = 200;
     
     public static final double FF = 0.13;
 
@@ -33,9 +34,10 @@ public class Elevator extends Subsystem {
         if(instance==null) {
             instance = new Elevator();
         }
+        
         return instance;
     }    
-
+    
     private Elevator() {
 
         masterTalon = new HSTalon(RobotMap.MASTER_TALON);
@@ -86,6 +88,12 @@ public class Elevator extends Subsystem {
         getMasterTalon().configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute);
         
         getMasterTalon().setSelectedSensorPosition(0);
+        
+        getMasterTalon().configForwardSoftLimitThreshold(ForwardLimit);
+        getMasterTalon().configForwardSoftLimitEnable(true);
+        
+        getMasterTalon().configReverseSoftLimitThreshold(BackwardLimit);
+        getMasterTalon().configReverseSoftLimitEnable(true);
     }
 
 }

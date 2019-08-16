@@ -15,6 +15,7 @@ import frc.robot.Subsystems.Elevator;
 import frc.robot.Subsystems.Arm;
 import frc.robot.Subsystems.Extender;
 import frc.robot.Subsystems.Flower;
+import frc.robot.Subsystems.Wrist;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -40,7 +41,8 @@ public class Robot extends TimedRobot {
     Arm.getInstance();
     Extender.getInstance();
     Flower.getInstance();
-  }
+    Wrist.getInstance();
+  } 
 
   /**
    * This function is called every robot packet, no matter the mode. Use

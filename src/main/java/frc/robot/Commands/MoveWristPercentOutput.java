@@ -1,17 +1,15 @@
 package frc.robot.Commands;
-/** */
-import com.ctre.phoenix.motorcontrol.ControlMode;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.OI;
 import frc.robot.Subsystems.Wrist;
 import harkerrobolib.commands.IndefiniteCommand;
 import harkerrobolib.util.MathUtil;
 
-
 public class MoveWristPercentOutput extends IndefiniteCommand {
 
-    public static final double SPEEDMULTIPLIER = 0.22;
+    public static final double SPEEDMULTIPLIER = 0.3;
     
     public MoveWristPercentOutput() {
 
@@ -27,6 +25,7 @@ public class MoveWristPercentOutput extends IndefiniteCommand {
     public void interrupted(){
         
         end();
+        
     }
 
     @Override
@@ -41,9 +40,6 @@ public class MoveWristPercentOutput extends IndefiniteCommand {
         Wrist.getInstance().getMasterTalonWrist();
 
         SmartDashboard.putNumber("SetPosition",Wrist.getInstance().getMasterTalonWrist().getSelectedSensorPosition());
-
-        
-
         
     }
 

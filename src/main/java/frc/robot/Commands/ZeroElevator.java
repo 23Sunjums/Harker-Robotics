@@ -11,7 +11,6 @@ public class ZeroElevator extends Command {
     private static final double NEGATIVEOUTPUT = -0.1;
     private static final double MINIMUM_TIME = 0.06;
     private double initializeTimmy;
-    // private double distraction = 5.31
     
     @Override
     protected void initialize() {
